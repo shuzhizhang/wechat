@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>在地图上画个“圈圈”</title>
+        <style>
+            #container{
+                min-height:600px;
+                border:1px solid;
+            }
+        </style>
+        <script src="http://map.qq.com/api/js?v=2.exp"></script>
+    </head>
+    <body>
+        <div id="container"></div>
+        <script>
+            var center = new qq.maps.LatLng(31.391308, 121.237231);
+            var map = new qq.maps.Map(document.getElementById("container"), {center: center,  zoom:15 });
+            var circle=new qq.maps.Circle({map:map,center:center,radius:1000,fillColor:new qq.maps.Color(0,96,88,0.15),strokeWeight:1});
+        </script>
+    </body>
+</html>
