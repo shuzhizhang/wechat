@@ -46,7 +46,7 @@ def parse_doc():	# 使用win32com模块处理doc文档
 
 # 以下为主代码
 PATH = "F:\python\\word"	# 设置“日报”文档所在的文件夹路径
-keyWord="流行性感冒"	#设置查找的关键字
+keyWord="手足口"	#设置查找的关键字
 data=pd.DataFrame(columns=['fashengtime', 'diqu', 'fashengshu']) 	# 创建包含三列的数据集，三列分别为“报告发生时间”、“地区”和“报告发生数”，抽取出的数据追加到这里。
 doc_files = os.listdir(PATH)	# 获取文件夹下所有“日报”文档的名称列表
 for file in doc_files:	# 遍历“日报”文档名称列表
